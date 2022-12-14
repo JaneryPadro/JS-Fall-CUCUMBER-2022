@@ -66,12 +66,9 @@ exports.config = {
         // excludeDriverLogs: ['bugreport', 'server'],
     },
     {
-    
-      
         maxInstances: 5,
         browserName: 'firefox',
         acceptInsecureCerts: true
-  
     }],
     //
     // ===================
@@ -147,11 +144,10 @@ exports.config = {
         disableWebdriverStepsReporting: true,
         useCucumberStepReporter: true,
         disableWebdriverScreenshotsReporting: false,
-
     }]],
 
 
-    
+    //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
@@ -240,7 +236,7 @@ exports.config = {
     // beforeCommand: function (commandName, args) {
     // },
     /**
-     * Cucumber Hooks
+     * Cucumber Hooks/Annotations
      *
      * Runs before a Cucumber Feature.
      * @param {String}                   uri      path to feature file
@@ -254,7 +250,8 @@ exports.config = {
      * @param {ITestCaseHookParameter} world    world object containing information on pickle and test step
      * @param {Object}                 context  Cucumber World object
      */
-    // beforeScenario: function (world, context) {
+    // beforeScenario: async function (world, context) {
+    //     await browser.url('/');
     // },
     /**
      *
@@ -276,13 +273,11 @@ exports.config = {
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {Object}             context          Cucumber World object
      */
-     afterStep: async function (step, scenario, { error, duration, passed } , context) {
-        //check if step is failed.
-        //if yes, take a screenshot and attach in report
-        if(error){
+    afterStep: async function (step, scenario, { error, duration, passed }, context) {
+        if (error) {
             await browser.takeScreenshot();
         }
-     },
+    },
     /**
      *
      * Runs after a Cucumber Scenario.
