@@ -1,0 +1,380 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1671428623119' stop='1671428633550'>
+    <name>Login</name>
+    <title>Login</title>
+    <test-cases>
+        <test-case start='1671428623147' status='failed' stop='1671428626235'>
+            <name>Verify error for invalid login</name>
+            <title>Verify error for invalid login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428623151' status='passed' stop='1671428624242'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428624242' status='passed' stop='1671428624438'>
+                    <name>When I type '#$%^&amp;*' as username</name>
+                    <title>When I type '#$%^&amp;*' as username</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428624438' status='passed' stop='1671428624642'>
+                    <name>And I type 'abcd@1234' as password</name>
+                    <title>And I type 'abcd@1234' as password</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428624642' status='passed' stop='1671428626037'>
+                    <name>And I click login button</name>
+                    <title>And I click login button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626038' status='failed' stop='1671428626234'>
+                    <name>Then I verify error is displayed</name>
+                    <title>Then I verify error is displayed</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='89ed0d73-1cbf-44b3-ad1b-f7879c22f829-attachment.png' type='image/png' size='23506'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>AssertionError: Login error is not displayed: expected false to be true</message>
+                <stack-trace>AssertionError: Login error is not displayed: expected false to be true
+                    + expected - actual
+                
+                    -false
+                    +true
+                
+                    at World.&lt;anonymous> (C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\step-definitions\Facebook\loginSD.js:63:95)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428626237' status='failed' stop='1671428629646'>
+            <name>Verify error for invalid password</name>
+            <title>Verify error for invalid password</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428626238' status='passed' stop='1671428626865'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626866' status='passed' stop='1671428627000'>
+                    <name>When I type 'validUser@gmail.com' as username</name>
+                    <title>When I type 'validUser@gmail.com' as username</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428627000' status='passed' stop='1671428627141'>
+                    <name>And I type 'incorrectPassword' as password</name>
+                    <title>And I type 'incorrectPassword' as password</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428627141' status='passed' stop='1671428627242'>
+                    <name>And I click login button</name>
+                    <title>And I click login button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428627242' status='failed' stop='1671428629645'>
+                    <name>Then I verify error is displayed</name>
+                    <title>Then I verify error is displayed</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='380ff321-cdb6-4aa6-af08-1f6d57f7f9b9-attachment.png' type='image/png' size='22948'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>AssertionError: Login error is not displayed: expected false to be true</message>
+                <stack-trace>AssertionError: Login error is not displayed: expected false to be true
+                    + expected - actual
+                
+                    -false
+                    +true
+                
+                    at World.&lt;anonymous> (C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\step-definitions\Facebook\loginSD.js:63:95)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428629647' status='failed' stop='1671428631206'>
+            <name>Verify error for empty login flow</name>
+            <title>Verify error for empty login flow</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428629649' status='passed' stop='1671428630102'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428630102' status='passed' stop='1671428630321'>
+                    <name>And I click login button</name>
+                    <title>And I click login button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428630321' status='failed' stop='1671428631206'>
+                    <name>Then I verify error is displayed</name>
+                    <title>Then I verify error is displayed</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='4b0beb15-bb15-431d-8a6c-461953cade26-attachment.png' type='image/png' size='23506'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>AssertionError: Login error is not displayed: expected false to be true</message>
+                <stack-trace>AssertionError: Login error is not displayed: expected false to be true
+                    + expected - actual
+                
+                    -false
+                    +true
+                
+                    at World.&lt;anonymous> (C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\step-definitions\Facebook\loginSD.js:63:95)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428631207' status='broken' stop='1671428631582'>
+            <name>Verify user gets a new page when click Instagram</name>
+            <title>Verify user gets a new page when click Instagram</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428631208' status='passed' stop='1671428631581'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428631581' status='broken' stop='1671428631581'>
+                    <name>When I click on Instagram</name>
+                    <title>When I click on Instagram</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428631581' status='broken' stop='1671428631582'>
+                    <name>Then I verify Instagram opens in a new window</name>
+                    <title>Then I verify Instagram opens in a new window</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify Instagram opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify Instagram opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\login.feature):1:1
+                	at Scenario(Verify user gets a new page when click &lt;pageName>):40:5
+                	at Step(I verify &lt;pageName> opens in a new window):42:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428631583' status='broken' stop='1671428631848'>
+            <name>Verify user gets a new page when click Oculus</name>
+            <title>Verify user gets a new page when click Oculus</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428631583' status='passed' stop='1671428631847'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428631847' status='broken' stop='1671428631848'>
+                    <name>When I click on Oculus</name>
+                    <title>When I click on Oculus</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428631848' status='broken' stop='1671428631848'>
+                    <name>Then I verify Oculus opens in a new window</name>
+                    <title>Then I verify Oculus opens in a new window</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify Oculus opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify Oculus opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\login.feature):1:1
+                	at Scenario(Verify user gets a new page when click &lt;pageName>):40:5
+                	at Step(I verify &lt;pageName> opens in a new window):42:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428631849' status='broken' stop='1671428632442'>
+            <name>Verify user gets a new page when click Meta Pay</name>
+            <title>Verify user gets a new page when click Meta Pay</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428631850' status='passed' stop='1671428632439'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428632439' status='broken' stop='1671428632440'>
+                    <name>When I click on Meta Pay</name>
+                    <title>When I click on Meta Pay</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428632441' status='broken' stop='1671428632442'>
+                    <name>Then I verify Meta Pay opens in a new window</name>
+                    <title>Then I verify Meta Pay opens in a new window</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify Meta Pay opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify Meta Pay opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\login.feature):1:1
+                	at Scenario(Verify user gets a new page when click &lt;pageName>):40:5
+                	at Step(I verify &lt;pageName> opens in a new window):42:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428632445' status='broken' stop='1671428632817'>
+            <name>Verify user gets a new page when click Portal</name>
+            <title>Verify user gets a new page when click Portal</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428632446' status='passed' stop='1671428632817'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428632817' status='broken' stop='1671428632817'>
+                    <name>When I click on Portal</name>
+                    <title>When I click on Portal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428632817' status='broken' stop='1671428632817'>
+                    <name>Then I verify Portal opens in a new window</name>
+                    <title>Then I verify Portal opens in a new window</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify Portal opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify Portal opens in a new window" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\login.feature):1:1
+                	at Scenario(Verify user gets a new page when click &lt;pageName>):40:5
+                	at Step(I verify &lt;pageName> opens in a new window):42:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428632819' status='passed' stop='1671428633548'>
+            <name>Verify error for empty login flow</name>
+            <title>Verify error for empty login flow</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='Login'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428632819' status='passed' stop='1671428633185'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428633185' status='passed' stop='1671428633286'>
+                    <name>And I verify login email is enabled</name>
+                    <title>And I verify login email is enabled</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428633286' status='passed' stop='1671428633394'>
+                    <name>And I verify login password is enabled</name>
+                    <title>And I verify login password is enabled</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428633394' status='passed' stop='1671428633548'>
+                    <name>And I verify login button is enabled</name>
+                    <title>And I verify login button is enabled</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

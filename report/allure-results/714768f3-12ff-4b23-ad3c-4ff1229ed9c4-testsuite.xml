@@ -1,0 +1,185 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1671428623117' stop='1671428626236'>
+    <name>Sign Up</name>
+    <title>Sign Up</title>
+    <test-cases>
+        <test-case start='1671428623136' status='passed' stop='1671428625303'>
+            <name>Verify current date is displayed on Sign-Up form</name>
+            <title>Verify current date is displayed on Sign-Up form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='feature' value='Sign Up'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428623138' status='passed' stop='1671428624211'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428624211' status='passed' stop='1671428624388'>
+                    <name>When I click on Create New Account</name>
+                    <title>When I click on Create New Account</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428624388' status='passed' stop='1671428625301'>
+                    <name>Then I verify current date is displayed in birthdate dropdown</name>
+                    <title>Then I verify current date is displayed in birthdate dropdown</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1671428625303' status='broken' stop='1671428625868'>
+            <name>Verify no gender button is selected</name>
+            <title>Verify no gender button is selected</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='feature' value='Sign Up'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428625304' status='passed' stop='1671428625722'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428625722' status='passed' stop='1671428625866'>
+                    <name>When I click on Create New Account</name>
+                    <title>When I click on Create New Account</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428625866' status='broken' stop='1671428625867'>
+                    <name>Then I verify female radio button is not selected</name>
+                    <title>Then I verify female radio button is not selected</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428625867' status='broken' stop='1671428625868'>
+                    <name>And I verify male radio button is not selected</name>
+                    <title>And I verify male radio button is not selected</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428625868' status='broken' stop='1671428625868'>
+                    <name>And I verify custom radio button is not selected</name>
+                    <title>And I verify custom radio button is not selected</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify custom radio button is not selected" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify custom radio button is not selected" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\signUp.feature):1:1
+                	at Scenario(Verify no gender button is selected):13:5
+                	at Step(I verify custom radio button is not selected):16:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1671428625869' status='broken' stop='1671428626235'>
+            <name>Verify user gets error if already registered</name>
+            <title>Verify user gets error if already registered</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='feature' value='Sign Up'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1671428625870' status='passed' stop='1671428626091'>
+                    <name>Given I am on facebook</name>
+                    <title>Given I am on facebook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626091' status='passed' stop='1671428626231'>
+                    <name>When I click on Create New Account</name>
+                    <title>When I click on Create New Account</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626231' status='broken' stop='1671428626232'>
+                    <name>And I enter "John" in firstname</name>
+                    <title>And I enter "John" in firstname</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626232' status='broken' stop='1671428626232'>
+                    <name>And I enter "Doe" in laststname</name>
+                    <title>And I enter "Doe" in laststname</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626232' status='broken' stop='1671428626232'>
+                    <name>And I enter "9879879870" in mobile number</name>
+                    <title>And I enter "9879879870" in mobile number</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626232' status='broken' stop='1671428626233'>
+                    <name>And I enter "abcd@1234" in new password</name>
+                    <title>And I enter "abcd@1234" in new password</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626233' status='broken' stop='1671428626233'>
+                    <name>And I enter "abcd@1234" in confirm new password</name>
+                    <title>And I enter "abcd@1234" in confirm new password</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626233' status='broken' stop='1671428626233'>
+                    <name>And I select "Dec 12 1990" in date of birth</name>
+                    <title>And I select "Dec 12 1990" in date of birth</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626234' status='broken' stop='1671428626234'>
+                    <name>And I select "female" in gender</name>
+                    <title>And I select "female" in gender</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626234' status='broken' stop='1671428626234'>
+                    <name>And I click submit button</name>
+                    <title>And I click submit button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1671428626234' status='broken' stop='1671428626235'>
+                    <name>Then I verify user is already registered error is displayed</name>
+                    <title>Then I verify user is already registered error is displayed</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Step "I verify user is already registered error is displayed" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I verify user is already registered error is displayed" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(C:\Users\mikki\OneDrive\Desktop\JS-Fall-CUCUMBER-2022\features\Facebook\signUp.feature):1:1
+                	at Scenario(Verify user gets error if already registered):19:5
+                	at Step(I verify user is already registered error is displayed):28:9
+                </stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
