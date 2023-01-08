@@ -106,6 +106,8 @@ class Commands {
             });
             return await $(locator).isEnabled();
         }
+
+       
     
         /**
          * Generic function to get Text of a WebElement

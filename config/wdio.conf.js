@@ -5,8 +5,6 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    user: 'deepaksharma_07ayic',
-    key: 'Xy84osDzoApXE6bqH5HQ',
     
     //
     // ==================
@@ -54,34 +52,26 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        maxInstances:5,
-        browserName: 'Chrome',
-        'bstack:options': {
-            os: 'Windows',
-            osVersion: '11',
-            browserVersion: '107.0'
-            },
+    
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 5,
+        //
+        browserName: 'chrome',
         acceptInsecureCerts: true
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
     },
     {
-        maxInstances:5,
-        browserName: 'Firefox',
-        'bstack:options': {
-            os: 'Windows',
-            osVersion: '10',
-            browserVersion: '106.0'
-        },
+    
+      
+        maxInstances: 5,
+        browserName: 'firefox',
         acceptInsecureCerts: true
-    },
-    {
-        maxInstances:5,
-        browserName: 'Chrome',
-        'bstack:options': {
-            os: 'OS X',
-            osVersion: 'Ventura',
-            browserVersion: '107.0'
-        },
-        acceptInsecureCerts: true
+  
     }],
     //
     // ===================
@@ -130,10 +120,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [['browserstack', {
-            preferScenarioName: true
-        }]
-    ],
+    services: ['selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -160,10 +147,11 @@ exports.config = {
         disableWebdriverStepsReporting: true,
         useCucumberStepReporter: true,
         disableWebdriverScreenshotsReporting: false,
+
     }]],
 
 
-    //
+    
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
@@ -252,7 +240,7 @@ exports.config = {
     // beforeCommand: function (commandName, args) {
     // },
     /**
-     * Cucumber Hooks/Annotations
+     * Cucumber Hooks
      *
      * Runs before a Cucumber Feature.
      * @param {String}                   uri      path to feature file
@@ -267,7 +255,7 @@ exports.config = {
      * @param {Object}                 context  Cucumber World object
      */
     // beforeScenario: async function (world, context) {
-    //     await browser.url('/');
+     //       await browser.url('/');
     // },
     /**
      *
@@ -289,11 +277,13 @@ exports.config = {
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {Object}             context          Cucumber World object
      */
-    afterStep: async function (step, scenario, { error, duration, passed }, context) {
-        if (error) {
+     afterStep: async function (step, scenario, { error, duration, passed } , context) {
+        //check if step is failed.
+        //if yes, take a screenshot and attach in report
+        if(error){
             await browser.takeScreenshot();
         }
-    },
+     },
     /**
      *
      * Runs after a Cucumber Scenario.
