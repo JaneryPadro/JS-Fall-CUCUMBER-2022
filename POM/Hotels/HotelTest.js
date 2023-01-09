@@ -1,5 +1,9 @@
+const Commands = require('../Commands');
+
+
 class HotelsTest{
 
+    
 // Locators for web-Elements on the HomePage (variables)
 homePageLanguageLocator ='//div[text()="English"]' 
 languageSelector = '#language-selector'
