@@ -20,16 +20,26 @@ increaseAdultRoomLocatorEnd = '//*[@aria-label="Increase the number of adults in
 // functions to interact with the web-Elements on the HomePage
 
 
-//Calender Locators
+//Calender related Locators
 calendarLocator = '#date_form_field-btn';
 calendarDisabledDatesAndMonth = '//button[@disabled]';
 currentMonthLocator = '//h2[text="January 2023"]';
 calenderDoneButton ='//button[text()="Done" and @data-stid]';
 calenderNextButton = '(//button[@data-stid="date-picker-paging"])[2]';
 calenderPrevButton = '(//button[@data-stid="date-picker-paging"])[1]';
+calendarSearchButton = '';
+fiveStarRatingLocator = '';
+priceSelectiveDropdown = '';
+
 
 //sign in related locators
 signInButton = '//button[text()="Sign in"]';
+signUpLink = '//a[@data-stid="link-header-account-signup"]';
+termsAndConditionsLink = '//a[text()="Terms and Conditions"]';
+termsAndConditionsHeader = '//h1[text()="TERMS OF SERVICE"]';
+lastRevisedText = '//span[text()= "Last revised: 01/01/23"]';
+privacyStatementLink = '//a[text()="Privacy Statement"]';
+lastUpdatedText  = '//p[text()="Last Updated: 20 December, 2022"]';
 feedbackLocator = '//a[text()="Feedback"]';
 submitLocator = '//button[@id="submit-button"]';
 submitErrorLocator = '//p[@data-localization="validation-heading"]';
@@ -40,14 +50,32 @@ priorSelectionLocator ='//label[@for="booked-here-before-yes"]';
 didYouAccomplishQuestionAns = '//label[@for="were-you-successful-yes"]';
 radioGroupSelection = '//div[@class="radio-group"]//input[@value="1"]';
 thankYouDisplayedMessage = '//h5[text()="THANK YOU FOR YOUR FEEDBACK."]';
+signInEmailLocator = '//input[@name="email"]';
+signInPasswordLocator = '//input[@name="password"]';
+clickSignInSubmit = '//button[@type="submit"]';
+errorMessageInSignPage = '//div[@class="uitk-error-summary"]';
+invalidEmailText ='//div[@id="loginFormEmailInput-error"]';
+invalidPasswordText = '//div[@id="loginFormPasswordInput-error"]';
 
+
+//sign up link locators
+signUpEmailLocator = '//input[@id="signupFormEmailInput"]';
+signUpEmailError = '//input[@id="signupFormEmailInput-error"]';
+signUpPasswordLocator = '//input[@id="signupFormPasswordInput"]';
+signUpPasswordError
+firstNameLocator = '//input[@id="signupFormFirstNameInput"]';
+lastNameLocator = '//input[@id="signupFormLastNameInput"]';
+invalidFirstName = '//div[@id="signupFormFirstNameInput-error"]';
+invalidLastName ='//div[@id="signupFormLastNameInput-error"]';
+keepSignInCheckboxLocator ='//input[@name="rememberMeSignUpCheckbox"]';
+signUpContinueButton = '//button[@id= "signupFormSubmitButton"]';
 
 //homepage related Get App locators
 getAppLocator ='//button[text()="Get the app"]';
 enterNumLocator ='//input[contains(@class, "field-input empty")]';
 phoneNumError = '//div[@id="phoneNumber-error"]';
 
-
+// Language Functions
 async selectLanguage(newLanguage){
     await this.Commands.clickWebElement(this.languageLocator);
     await this.Commands.selectDataInDropDown(this.languageSelector, newLanguage);
@@ -97,6 +125,14 @@ async clickSignIn(){
     await this.Commands.clickWebElement(this.signInButton);
 }
 
+async clickSignUp(){
+    await this.Commands.clickWebElement(this.signUpLink);
+}
+
+async clickTermAndConditions(){
+    await this.Commands.clickWebElement(this.termsAndConditionsLink);
+}
+
 async clickFeedButton(){
     await this.Commands.clickWebElement(this.feedbackLocator);
 }
@@ -106,6 +142,16 @@ async clickSubmitButton(){
 }
 async errorOutline(){
     await this.Commands.clickWebElement(this.requiredDottedLocator);
+}
+
+async typeInEmail(Email){
+    await this.Commands.clickWebElement(this.signUpEmailLocator);
+    await this.Commands.typeInWebElement(this.signUpEmailLocator, Email);
+}
+
+async typeInPassword(Password){
+    await this.Commands.clickWebElement(this.signUpPasswordLocator);
+    await this.Commands.typeInWebElement(this.signUpPasswordLocator, Password );
 }
 
 async selectReturnOpt(){
@@ -125,6 +171,29 @@ async thankYouMessage(){
     await this.Commands.isWebElementDisplayed(this.thankYouDisplayedMessage);
 }
 
+async headerForTermsAndConditions(){
+    return await $(this.termsAndConditionsHeader).isDisplayed();
+}
+
+async lastRevisedDateDisplayed(){
+    return await $(this.lastRevisedText).isDisplayed();
+} 
+
+async lastUpdatedDisplayed(){
+    return await $(this.lastUpdatedText).isDisplayed();
+}
+
+async clickPrivacyLink(){
+     await this.Commands.clickWebElement(this.privacyStatementLink);
+}
+
+async lastRevisedDateDisplayed(){
+    return await $(this.lastRevisedText).isDisplayed();
+}
+
+async lastRevisedDateDisplayed(){
+    return await $(this.lastRevisedText).isDisplayed();
+}
 
 //homepage related Get App functions
 async  clickGetApp(){
